@@ -1,0 +1,322 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>CRAFT-BASKET</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="CRAFT-BASKET" name="keywords">
+        <meta content="CRAFT-BASKET" name="description">
+
+        <!-- Favicon -->
+        <link href="https://image.shutterstock.com/image-photo/kindergarten-childrens-craft-tree-made-600w-375498841.jpg" rel="icon">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Lato&family=Oswald:wght@200;300;400&display=swap" rel="stylesheet">
+        
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="{%static 'lib/animate/animate.min.css'%}" rel="stylesheet">
+        <link href="{%static 'lib/owlcarousel/assets/owl.carousel.min.css'%}" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="{%static 'css/style.css'%}" rel="stylesheet">
+    </head>
+
+    <body class="page">
+        <!-- Top Bar Start -->
+        <div class="top-bar d-none d-md-block">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="top-bar-left">
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="top-bar-right">
+                            <div class="social">
+                                <a href=""><i class="fab fa-twitter"></i></a>
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Top Bar End -->
+
+        <!-- Nav Bar Start -->
+        <div class="navbar navbar-expand-lg bg-dark navbar-dark">
+            <div class="container-fluid">
+                <a href="{% url 'onlineplatform' %}" class="navbar-brand">CRAFT-BASKET</a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto">
+                        <a href=" {% url 'onlineplatform' %}" class="nav-item nav-link active">Home</a>
+                        <a href="{% url 'about_craft' %}" class="nav-item nav-link active">About</a>
+                        <a href="{% url 'admin_login'%}" class="nav-item nav-link">admin</a>
+                        <a href="{% url 'Tutor_login'%}" class="nav-item nav-link">Tutor</a>
+                        <a href="{% url 'user_login'%}" class="nav-item nav-link">user</a>
+                        <a href="{% url 'review_craft'%}" class="nav-item nav-link">Review</a>
+                        <a href="{% url 'contact_craft'%}" class="nav-item nav-link">Contact</a>
+                        <a href="{% url 'courses_craft'%}" class="nav-item nav-link">courses</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Nav Bar End -->
+        
+
+        <!-- About Start -->
+        <div class="about mt-125">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <div class="about-img">
+                            <div class="about-img-1">
+                                <img src="{%static 'img/about-22.jpg'%}" alt="Image">
+                            </div>
+                            <div class="about-img-2">
+                                <img src="{%static 'img/about-11.jpg'%}" alt="Image">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="section-header">
+                            <p>Know About Us</p>
+                            <h2>25 Years Experience</h2>
+                        </div>
+                        <div class="about-text">
+                            <p>
+                                Arts and crafts describes a wide variety of activities involving making things with one's own hands. Arts and crafts is usually a hobby. Some crafts (art skills) have been practised since preshistoric times, others are more recent inventions. William Morris, John Ruskin and others promoted an "arts and crafts" movement in the late 19th century, which popularized the phrase.
+                            </p>
+                            <p>
+                                Both children and adults enjoy arts and crafts. Children in schools may learn skills such as woodworking, wood carving, sewing, or making things with all sorts of material. Many community centres and schools have evening or day classes and workshops where one can learn arts and craft skills.
+                            </p>
+                            <a class="btn" href="">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+
+
+        <!-- Feature Start -->
+        <div class="feature">
+            <div class="container">
+                <div class="row align-items-end">
+                    <div class="col-md-6">
+                        <div class="feature-img">
+                            <img src="{%static 'img/business-man.png'%}" alt="Image">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="section-header">
+                           
+                            <h2>Why Choose Us?</h2>
+                        </div>
+                        <p>
+                            Creativity goes hand in hand with imagination! Imagination underpins creativity and vice versa. Imagination is crucial to problem solving, thinking outside of the box and being able to immerse oneself in many pursuits, such as art, literature and film. Being able to think creatively as well as creative expression helps to broaden the imagination.
+                           </p>
+                        <div class="row counters">
+                            <div class="col-6">
+                                <i class="fa fa-user"></i>
+                                <div class="counters-text">
+                                    <h2 data-toggle="counter-up">10000</h2>
+                                    <p>Our Tutors</p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <i class="fa fa-users"></i>
+                                <div class="counters-text">
+                                    <h2 data-toggle="counter-up">2000</h2>
+                                    <p>Our users</p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <i class="fa fa-check"></i>
+                                <div class="counters-text">
+                                    <h2 data-toggle="counter-up">300</h2>
+                                    <p>daily classes</p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <i class="fa fa-running"></i>
+                                <div class="counters-text">
+                                    <h2 data-toggle="counter-up">40</h2>
+                                    <p>40 categories</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Feature End -->
+
+
+        <!-- Team Start -->
+        <div class="team">
+            <div class="container">
+                <div class="section-header">
+                    <p>Meet Our Advisors</p>
+                    <h2>Our Professional Tutor verified Team</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="team-item">
+                            <div class="team-img">
+                                <img src="{%static 'img/team-1.jpg'%}" alt="Team Image">
+                            </div>
+                            <div class="team-text">
+                                <h2>Mammo dein</h2>
+                                <p>Founder & CEO</p>
+                                <div class="team-social">
+                                    <a href=""><i class="fab fa-twitter"></i></a>
+                                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                    <a href=""><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="team-item">
+                            <div class="team-img">
+                                <img src="{%static 'img/team-2.jpg'%}" alt="Team Image">
+                            </div>
+                            <div class="team-text">
+                                <h2>Fazal Khan</h2>
+                                <p>Chef Executive</p>
+                                <div class="team-social">
+                                    <a href=""><i class="fab fa-twitter"></i></a>
+                                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                    <a href=""><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="team-item">
+                            <div class="team-img">
+                                <img src="{%static 'img/team-3.jpg'%}" alt="Team Image">
+                            </div>
+                            <div class="team-text">
+                                <h2>Tarun ves</h2>
+                                <p>Chef Advisor</p>
+                                <div class="team-social">
+                                    <a href=""><i class="fab fa-twitter"></i></a>
+                                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                    <a href=""><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="team-item">
+                            <div class="team-img">
+                                <img src="{%static 'img/team-4.jpg'%}" alt="Team Image">
+                            </div>
+                            <div class="team-text">
+                                <h2>vinay verse</h2>
+                                <p>Advisor</p>
+                                <div class="team-social">
+                                    <a href=""><i class="fab fa-twitter"></i></a>
+                                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                    <a href=""><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Team End -->
+
+
+        <!-- Footer Start -->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="footer-contact">
+                                    <h2>Our Head Office</h2>
+                                    <p><i class="fa fa-map-marker-alt"></i>pillar no:1657,Dayandnagar,LBnagar</p>
+                                    <p><i class="fa fa-phone-alt"></i>9087657274</p>
+                                    <p><i class="fa fa-envelope"></i>craftbasket@gmail.com</p>
+                                    <div class="footer-social">
+                                        <a href=""><i class="fab fa-twitter"></i></a>
+                                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                                        <a href=""><i class="fab fa-youtube"></i></a>
+                                        <a href=""><i class="fab fa-instagram"></i></a>
+                                        <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="footer-link">
+                                    <h2>Quick Links</h2>
+                                    <a href="">Terms of use</a>
+                                    <a href="">Privacy policy</a>
+                                    <a href="">Cookies</a>
+                                    <a href="">Help</a>
+                                    <a href="">FQAs</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="footer-newsletter">
+                            
+                            <div class="form">
+                                <input class="form-control" placeholder="Email goes here">
+                                <button class="btn">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container copyright">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>&copy; <a href="#">codebook.in</a>, All Right Reserved.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>Designed By <a href="https://htmlcodex.com">FZ infotech</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="{%static 'lib/easing/easing.min.js'%}"></script>
+        <script src="{%static 'lib/owlcarousel/owl.carousel.min.js'%}"></script>
+        <script src="{%static 'lib/waypoints/waypoints.min.js'%}"></script>
+        <script src="{%static 'lib/counterup/counterup.min.js'%}"></script>
+        
+        <!-- Contact Javascript File -->
+        <script src="{%static 'mail/jqBootstrapValidation.min.js'%}"></script>
+        <script src="{%static 'mail/contact.js'%}"></script>
+
+        <!-- Template Javascript -->
+    <script src="{%static 'js/main.js'%}"></script>
+    </body>
+</html>

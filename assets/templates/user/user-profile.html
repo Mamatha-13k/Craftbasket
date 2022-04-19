@@ -1,0 +1,272 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>CRAFT-BASKET</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Consulting Website Template Free Download" name="keywords">
+    <meta content="Consulting Website Template Free Download" name="description">
+    <!-- Favicon -->
+    <link href="https://image.shutterstock.com/image-photo/kindergarten-childrens-craft-tree-made-600w-375498841.jpg"
+        rel="icon">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Oswald:wght@200;300;400&display=swap"
+        rel="stylesheet">
+    <!-- CSS Libraries -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="{% static 'lib/animate/animate.min.css'%}" rel="stylesheet">
+    <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css'%}" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!-- Template Stylesheet -->
+    <link href="{% static 'css/style.css'%}" rel="stylesheet">
+    <link href="{% static 'css/user-profile.css' %}" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="{% static 'css/card.css' %}"> -->
+
+
+
+</head>
+
+<body class="page">
+    <!-- Top Bar Start -->
+    <div class="top-bar d-none d-md-block">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="top-bar-left"></div>
+                </div>
+                <div class="col-md-4">
+                    <div class="top-bar-right">
+                        <div class="social">
+                            <a href="">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Top Bar End -->
+    <!-- Nav Bar Start -->
+    <div class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand">CRAFT-BASKET</a>
+            <div class="navbar-nav ml-auto">
+                <a href="{% url 'user_home' %}" class="nav-item
+                        nav-link active">profile</a>
+                <a href="{% url 'user_tutors' %}" class="nav-item nav-link">Tutors</a>
+                <a href="{% url 'courses_user' %}" class="nav-item
+                        nav-link">
+                    Courses</a>
+                <a href="{% url 'user-mycourses' %}" class="nav-item
+                    nav-link">my courses</a>    
+               
+            
+                <a href="{% url 'onlineplatform' %}" class="nav-item
+                        nav-link">logout</a>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <!-- Nav Bar End -->
+
+    {% if messages %}
+    {% for message in messages %}
+     {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+        <script> swal({
+            title:"Success:)",
+            text:"login Successful",
+            icon:"success",
+            button:"ok",  
+        });
+    </script>
+    
+    {% endif %}
+    {% endfor %}
+    {% endif %}
+  
+   
+
+    
+
+      
+    <!-- /profile end -->
+    <h2 style="text-align: center;">Profile Details</h2>
+    <div class="row gutters-sm">
+        {% for p in profile %}
+        <div class="col-md-4 mb-3">
+          <div class="card  m-5  p-5" >
+         <div class="card-body">
+           <div class="d-flex flex-column align-items-center text-center">
+          <img src="media/{{ p.image }}" alt="Admin" class="rounded-circle" width="150">
+          <div class="mt-3">
+            <h4>Profile Picture</h4>
+            <p class="text-secondary mb-1">Id:{{ p.User_id }}</p>
+            <p class="text-muted font-size-sm"></p>
+            
+          </div>
+           </div>
+         </div>
+          </div>
+        
+        </div>
+        <div class="col-md-8">
+          <div class="card mb-3  m-5">
+         <div class="card-body">
+           <div class="row p-3">
+          <div class="col-sm-3">
+            <h6 class="mb-0 ">Full Name</h6>
+          </div>
+          <div class="col-sm-9 text-secondary">
+            {{ p.full_Name }}
+          </div>
+           </div>
+           <hr>
+           <div class="row">
+          <div class="col-sm-3">
+            <h6 class="mb-0">Email</h6>
+          </div>
+          <div class="col-sm-9 text-secondary">
+            {{ p.Email }}
+          </div>
+           </div>
+           <hr>
+           <div class="row">
+          <div class="col-sm-3">
+            <h6 class="mb-0">Phone</h6>
+          </div>
+          <div class="col-sm-9 text-secondary">
+            {{ p.phone_number }}
+          </div>
+           </div>
+           <hr>
+           <div class="row">
+          <div class="col-sm-3">
+            <h6 class="mb-0">Gender</h6>
+          </div>
+          <div class="col-sm-9 text-secondary">
+            {{ p.gender }}
+          </div>
+           </div>
+           <hr>
+           <div class="row">
+          <div class="col-sm-3">
+            <h6 class="mb-0">Category</h6>
+          </div>
+          <div class="col-sm-9 text-secondary">
+            {{ p.category }}
+          </div>
+           </div>
+           <hr>
+           <div class="row">
+          <div class="col-sm-12">
+            <a class="btn btn-info text-white " href="{% url 'courses_user' %}" >Total courses Available in Craft Basket:{{courses_count}}</a>
+          </div>
+           </div>
+         </div>
+          </div>
+     
+        
+     
+     
+          {% endfor %}
+        </div>
+         </div>
+    
+
+    <!-- Footer Start -->
+    <div class="footer" style="margin-top: 200px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="footer-contact">
+                                <h2>Our Head Office</h2>
+                                <p><i class="fa fa-map-marker-alt"></i>Pillar-No:1665,Dayanad
+                                    Nagar,LB nagar,Hyd,Telangana</p>
+                                <p><i class="fa fa-phone-alt"></i>7678366346</p>
+                                <p><i class="fa fa-envelope"></i>codebook@example.com</p>
+                                <div class="footer-social">
+                                    <a href=""><i class="fab fa-twitter"></i></a>
+                                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a href=""><i class="fab fa-youtube"></i></a>
+                                    <a href=""><i class="fab fa-instagram"></i></a>
+                                    <a href=""><i class="fab
+                                                        fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="footer-link">
+                                <h2>Quick Links</h2>
+                                <a href="">Terms of use</a>
+                                <a href="">Privacy policy</a>
+                                <a href="">Cookies</a>
+                                <a href="">Help</a>
+                                <a href="">FQAs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="footer-newsletter">
+                        <h2>Newsletter</h2>
+                        <div class="form">
+                            <input class="form-control" placeholder="Email
+                                            goes here">
+                            <button class="btn">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container copyright">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; <a href="#">Codebook</a>, All Right Reserved.</p>
+                </div>
+                <div class="col-md-6">
+                    <p>Designed By :Infotech</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'lib/easing/easing.min.js'%}"></script>
+    <script src="{% static 'lib/owlcarousel/owl.carousel.min.js'%}"></script>
+    <script src="{% static 'lib/waypoints/waypoints.min.js'%}"></script>
+    <script src="{% static 'lib/counterup/counterup.min.js'%}"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <!-- Template Javascript -->
+    <script src="{% static 'js/main.js'%}"></script>
+</body>
+
+</html>
